@@ -5,7 +5,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 router.get('/', async(req, res) => {
     try {
-       const tags=await Tag.findAll({include:[{model:Product,ProductTag}]})
+       const tags=await Tag.findAll({include:{model:Product, ProductTag}})
        res.status(200).json(tags)
     } catch (error) {
     res.status(500).json(error.message)
@@ -48,7 +48,7 @@ router.put('/:id', async(req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
-    const tags=await Tag.destroy({where:{id:req.params.id}})
+    const tags=await ProductTag.destroy({where:{id:req.params.id}})
     res.status(200).json(tags)
   } catch (error) {
     res.status(500).json(error.message)

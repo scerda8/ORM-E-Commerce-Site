@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const { Category, Product,ProductTag } = require('../../models');
 
 // The `/api/categories` endpoint
 
@@ -48,7 +48,7 @@ router.put('/:id',async (req, res) => {
 router.delete('/:id', async(req, res) => {
   // delete a category by its `id` value
 try {
-    const category=await Category.destroy({where:{id:req.params.id}})
+    const category=await ProductTag.destroy({where:{id:req.params.id}})
     res.status(200).json(category)
 } catch (error) {
     res.status(500).json(error.message)

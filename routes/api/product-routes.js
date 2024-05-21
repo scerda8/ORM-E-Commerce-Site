@@ -106,7 +106,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', async(req, res) => {
     try {
-        const product=await Product.destroy({where:{id:req.params.id}})
+        const product=await ProductTag.destroy({where:{id:req.params.id}})
         res.status(200).json(product)
     } catch (error) {
         res.status(500).json(error.message)
