@@ -19,7 +19,7 @@ Testing
 Link to github repo
 
 Video demo
-[text](../../Downloads/E-commerce.webm)
+
 
 
 
@@ -75,9 +75,7 @@ https://github.com/scerda8/ORM-E-Commerce-Site
 
 Video demo:
 
-
-
-
+https://drive.google.com/file/d/17FxMJYbSZ_VjpatHy6ivwBz1qopIJL1o/view?usp=sharing
 
 
 
